@@ -9,7 +9,6 @@ function App() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit!!!!
         </MyComponets>
         <MyComponets title={'hello2'}>
-
         </MyComponets>
         <MyComponets title={'hello3'}/>
 </>
