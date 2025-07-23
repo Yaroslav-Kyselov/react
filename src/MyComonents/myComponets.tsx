@@ -1,9 +1,17 @@
-import type {FC} from "react";
+import type {FC, ReactNode} from "react";
 
-type MyComponetPropType = {text: string;}
+type MyComponetPropType = {
+    title: string;
+    children?: ReactNode
+};
 
-const MyComponet:FC<MyComponetPropType>=({text})  => {
-    return <div>{text}</div>
+const MyComponet:FC<MyComponetPropType>=({title,children})  => {
+    return (<div>
+    <h2>{title}</h2>
+    <p>{children}</p>
+
+    </div>
+    );
 }
 
 export default MyComponet;
