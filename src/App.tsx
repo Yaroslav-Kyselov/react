@@ -8,8 +8,10 @@ function App() {
         <MyComponets title={'title1'}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit!!!!
         </MyComponets>
+
         <MyComponets title={'hello2'}>
         </MyComponets>
+
         <MyComponets title={'hello3'}/>
 </>
 )
