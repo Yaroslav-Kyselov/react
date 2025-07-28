@@ -1,12 +1,15 @@
 import './App.css'
-import myComponets from "./MyComponents/myComponets.tsx";
+import MyComponet from "./component/MyComponet.tsx";
 
 function App() {
 
     return (
         <>
-            <myComponets text={'ldjfjkg'}/>
-            {myComponets({text: 'hello1234'})}
+            <MyComponet text="My Componet1" />
+            <MyComponet text="My Componet2" />
+            <MyComponet text="My Componet3" />
+            {/*{MyComponet({text: 'Hello, World! from MyComponet'})}*/}
+
         </>
     );
 }
