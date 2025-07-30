@@ -2,12 +2,12 @@ import type {ICourses} from "../../models/ICourses.tsx";
 
 interface CourseComponentProps {
     item: ICourses
-    children: React.ReactNode
+    // children: React.ReactNode
 }
 
-export const CourseComponent = ({item}: CourseComponentProps, index: number) => {
+export const CourseComponent = ({item}: CourseComponentProps) => {
     return (
-        <div key={index} className='my-2 border-4'>
+        <div className='my-2 border-4'>
             <h2>{item.title}</h2>
             <p>Duration: {item.monthDuration} months</p>
             <p>Hours: {item.hourDuration}</p>
