@@ -1,5 +1,5 @@
 
-import UsersComponent from "./Comonents/users-component/usersComponent.tsx";
+import UsersComponent from "./Components/users-component/usersComponent.tsx";
 
 
 const App = () => {
