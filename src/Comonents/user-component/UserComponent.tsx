@@ -11,4 +11,5 @@ const UserComponent:FC<UserPropType> = ({item}) => {
     );
 };
 
+
 export default UserComponent;
