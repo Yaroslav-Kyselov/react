@@ -1,5 +1,5 @@
 import './App.css'
-import {MyCoursesComponent} from "./сomonents/MyCoursesComponent/MyCoursesComponent.tsx";
+import {MyCoursesComponent} from "./сomponents/MyCoursesComponent/MyCoursesComponent.tsx";
 
 function App() {
 
