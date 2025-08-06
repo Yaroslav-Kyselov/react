@@ -1,13 +1,14 @@
 import './App.css'
+import Posts from "./components/posts/Posts.tsx";
 
 function App() {
 
-  return (
-    <>
+    return (
+        <>
 
-
-    </>
-  );
+            <Posts/>
+        </>
+    );
 }
 
 export default App
