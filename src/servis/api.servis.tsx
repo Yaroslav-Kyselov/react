@@ -1,12 +1,12 @@
-import type {ICommentModel} from "../models/CommentsModel.tsx";
-import type {ICommentsModelDummy} from "../models/CommentsModelDummy.tsx";
+import type {IProductsModel} from "../models/ProductsModel.tsx";
+import type {IProductsModelDummy} from "../models/ProductsModelDummy.tsx";
 
-const endpointComments = import.meta.env.VITE_API_COMMENTS + '/comments';
-const LoadComments = async (): Promise<ICommentModel[]> => {
+const endpointProducts = import.meta.env.VITE_API_COMMENTS + '/products';
+const LoadProducts = async (): Promise<IProductsModel[]> => {
 
-    const response: ICommentsModelDummy = await fetch(endpointComments)
+    const response: IProductsModelDummy = await fetch(endpointProducts)
         .then(value => value.json())
 
-    return response.comments;
+    return response.products;
 }
-export default LoadComments;
+export default LoadProducts;
