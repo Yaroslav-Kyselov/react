@@ -11,8 +11,6 @@ export const Posts=()=> {
     },[])
 
 
-
-
     return (
         <div>
             {
