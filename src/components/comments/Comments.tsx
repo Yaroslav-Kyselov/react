@@ -18,4 +18,5 @@ export const Comments = () => {
         </div>
     );
 }
+
 export default Comments;
