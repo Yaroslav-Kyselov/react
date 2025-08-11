@@ -1,16 +1,14 @@
-import Menu from "../components/Menu/Menu.tsx";
+import Menu from "../components/menu/Menu.tsx";
 import {Outlet} from "react-router-dom";
 
-
-const MainLayout = () => {
+const Layout = () => {
     return (
         <div>
             <Menu/>
             <hr/>
-
             <Outlet/>
         </div>
     );
 };
 
-export default MainLayout;
+export default Layout;

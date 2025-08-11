@@ -1,0 +1,14 @@
+import type {IUser} from "../model/IUser.ts";
+import {urls} from "../constants/urls.tsx";
+
+
+export const userService = {
+    getUsers: async (): Promise<IUser[]> => {
+        return await fetch(urls.users.allUsers)
+            .then(res => res.json())
+    },
+    getUserById: async (id: number): Promise<IUser> => {
+        return await fetch(urls.users.byId(id))
+            .then(res => res.json())
+    }
+}
