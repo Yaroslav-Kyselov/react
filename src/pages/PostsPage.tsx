@@ -1,6 +1,6 @@
 import {Link, Outlet} from "react-router-dom";
 
-const Posts = () => {
+const PostsPage = () => {
     return (
         <div>
             <ul>
@@ -13,4 +13,4 @@ const Posts = () => {
     );
 };
 
-export default Posts;
+export default PostsPage;

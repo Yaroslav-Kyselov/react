@@ -1,6 +1,6 @@
 import {Link, Outlet} from "react-router-dom";
 
-const Users = () => {
+const UsersPage = () => {
     return (
         <div>
             <ul>
@@ -13,4 +13,4 @@ const Users = () => {
     );
 };
 
-export default Users;
+export default UsersPage;
