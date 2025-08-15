@@ -10,22 +10,21 @@ export const router = createBrowserRouter([
     {
         path: '/', element: <MainLayout/>,
         children: [
-            {
-                path: 'users', element: <UsersPage/>, children: [
-                    {path: 'jsonplaceholder', element: <div>JSON Placeholder Users</div>},
-                    {path: 'dummyjson', element: <div>DummyJson Users</div>},
-                ]
-            },
-            {
-                path: 'posts', element: <PostsPage/>, children: [
-                    {path: 'jsonplaceholder', element: <div>JSON Placeholder Posts</div>},
-                    {path: 'dummyjson', element: <div>DummyJson Posts</div>},
-                ]
-            },
-            {path: 'comments', element: <CommentsPage/>, children:[
-                    {path: 'jsonplaceholder', element: <JsonComments/>},
-                    {path: 'dummyjson', element: <DummyComments/>},
-                ]},
+
+            {path: 'users', element: <UsersPage/>},
+            {path: 'users/jsonplaceholder', element: <div>JSON Placeholder Users</div>},
+            {path: 'users/dummyjson', element: <div>DummyJson Users</div>},
+
+
+            {path: 'posts', element: <PostsPage/>},
+            {path: 'posts/jsonplaceholder', element: <div>JSON Placeholder Posts</div>},
+            {path: 'posts/dummyjson', element: <div>DummyJson Posts</div>},
+
+
+            {path: 'comments', element: <CommentsPage/>},
+            {path: 'comments/jsonplaceholder', element: <JsonComments/>},
+            {path: 'comments/dummyjson', element: <DummyComments/>},
+
 
         ]
     }
