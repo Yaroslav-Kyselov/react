@@ -1,10 +1,7 @@
-
-
 export const JsonComments = () => {
     return (
         <div>
-            jsonplaceholder comments1
+            11111
         </div>
     );
 };
-
