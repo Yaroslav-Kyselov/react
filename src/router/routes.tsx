@@ -3,7 +3,7 @@ import MainLayout from "../layout/MainLayout.tsx";
 import UsersPage from "../pages/UsersPage.tsx";
 import PostsPage from "../pages/PostsPage.tsx";
 import CommentsPage from "../pages/CommentsPage.tsx";
-import {JsonComment} from "../components/CommentsComponent/JsonComment/JsonComment.tsx";
+import {JsonComments} from "../components/CommentsComponent/JsonComment/JsonComments.tsx";
 import DummyComments from "../components/CommentsComponent/DummyComment/DummyComments.tsx";
 
 export const router = createBrowserRouter([
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
                 ]
             },
             {path: 'comments', element: <CommentsPage/>, children:[
-                    {path: 'jsonplaceholder', element: <JsonComment/>},
+                    {path: 'jsonplaceholder', element: <JsonComments/>},
                     {path: 'dummyjson', element: <DummyComments/>},
                 ]},
 
