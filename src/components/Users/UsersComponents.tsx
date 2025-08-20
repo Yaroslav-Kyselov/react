@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import type {IUser} from "../../models/IUser.ts";
 import {getAll} from "../../services/general.api.service.ts";
 import type {IBaseResponseModel} from "../../models/IBaseResponseModel.ts";
+import {UserComponent} from "./UserComponent.tsx";
 
 
 export const UsersComponents = () => {
@@ -18,7 +19,7 @@ export const UsersComponents = () => {
     return (
         <div>
 
-            {users.map((user) => <div key={user.id}>{user.username}</div>)}
+            {users.map((user) => <UserComponent key={user.id} user={user}/>)}
 
 
         </div>

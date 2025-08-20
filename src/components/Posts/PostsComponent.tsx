@@ -1,5 +1,26 @@
-export const PostsComponent = () => {
+import {useEffect, useState} from "react";
+import {getAll} from "../../services/general.api.service.ts";
+import type {IBaseResponseModel} from "../../models/IBaseResponseModel.ts";
+import type {IPost} from "../../models/IPost.ts";
+import {PostComponent} from "./PostComponent.tsx";
+
+export const PostsComponents = () => {
+
+    const [posts, setPosts] = useState<IPost[]>([])
+
+    useEffect(() => {
+        getAll<IBaseResponseModel & { posts: IPost[] }>('/posts')
+            .then(({posts}) => setPosts(posts));
+
+    }, []);
+
+
     return (
-        <>PostsComponent</>
+        <div>
+
+            {posts.map((post) => <PostComponent key={post.id} post={post}/>)}
+
+
+        </div>
     );
 };
