@@ -6,10 +6,10 @@ type Props ={
     cart:ICart
 }
 
-export const CartComponent:FC<Props> = () => {
+export const CartComponent:FC<Props> = ({cart}) => {
     return (
         <div>
-            111
+            {cart.total}
         </div>
     );
 };
