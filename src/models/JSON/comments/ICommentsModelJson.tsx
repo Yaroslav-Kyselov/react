@@ -1,4 +1,4 @@
-export interface ICommentModel {
+export interface ICommentsModelJson {
     postId: number;
     id: number;
     name: string;

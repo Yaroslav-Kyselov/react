@@ -4,10 +4,17 @@ export interface User {
   fullName: string;
 }
 
-export interface ICommentModel {
+export interface Comments {
   id: number;
   body: string;
   postId: number;
   likes: number;
   user: User;
+}
+
+export interface ICommentsModelDummy {
+  comments: Comments[];
+  total: number;
+  skip: number;
+  limit: number;
 }
