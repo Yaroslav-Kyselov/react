@@ -14,4 +14,8 @@
 
 /comments/dummyjson – відобразити всі об’єкти з https://dummyjson.com/comments
 
+
+VITE_API_URL_JSON=https://jsonplaceholder.typicode.com
+VITE_API_URL_DUMMY=https://dummyjson.com
+
  
