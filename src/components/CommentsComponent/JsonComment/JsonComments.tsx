@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 
 import {JsonComment} from "./JsonComment.tsx";
 import type {ICommentsModelJson} from "../../../models/JSON/comments/ICommentsModelJson.tsx";
-import {LoadCommentsJSON} from "../../../servises/api.comments.tsx";
+import {LoadCommentsJSON} from "../../../servises/api.JSON.tsx";
 
 export const JsonComments = () => {
 

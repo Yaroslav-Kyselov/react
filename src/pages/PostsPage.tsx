@@ -4,7 +4,7 @@ const PostsPage = () => {
     return (
         <div>
             <ul>
-                <li><Link to={'/posts/jsonplaceholder'}>jsonplaceholder</Link></li>
+                <li><Link to={'/posts/jsonplaceholder'}>jsonPOSTS</Link></li>
                 <li><Link to={'/posts/dummyjson'}>dummyjson</Link></li>
 
             </ul>
