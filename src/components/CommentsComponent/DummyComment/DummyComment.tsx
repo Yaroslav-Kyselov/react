@@ -1,9 +1,9 @@
 import type {FC} from "react";
-import type {ICommentModel} from "../../../models/JSON/comments/ICommentsModelJson.tsx";
+import type {CommentsDummy} from "../../../models/DUMMY/comments/ICommentsModelDummy.tsx";
 
 
 type CommentPropsType = {
-    comments:ICommentModel;
+    comments:CommentsDummy;
 }
 export const DummyComment:FC<CommentPropsType> = ({comments}) => {
     return (

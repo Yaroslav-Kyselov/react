@@ -4,7 +4,7 @@ export interface User {
   fullName: string;
 }
 
-export interface Comments {
+export interface CommentsDummy {
   id: number;
   body: string;
   postId: number;
@@ -13,7 +13,7 @@ export interface Comments {
 }
 
 export interface ICommentsModelDummy {
-  comments: Comments[];
+  comments: CommentsDummy[];
   total: number;
   skip: number;
   limit: number;

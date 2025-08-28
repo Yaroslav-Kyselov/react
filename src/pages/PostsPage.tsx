@@ -5,7 +5,7 @@ const PostsPage = () => {
         <div>
             <ul>
                 <li><Link to={'/posts/jsonplaceholder'}>jsonPOSTS</Link></li>
-                <li><Link to={'/posts/dummyjson'}>dummyjson</Link></li>
+                <li><Link to={'/posts/dummyjson'}>dummyPOSTS</Link></li>
 
             </ul>
             <Outlet/>
