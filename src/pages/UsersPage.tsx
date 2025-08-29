@@ -4,7 +4,7 @@ export const UsersPage = () => {
     return (
         <div>
             <hr/>
-            {/*<Outlet/>*/}
+
             <hr/>
 
             <UsersComponent/>
