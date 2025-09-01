@@ -7,7 +7,7 @@ function App() {
     return (
         <div>
             <SomeComponent/>
-            hello world
+
             <PaginationComponent/>
 
         </div>
