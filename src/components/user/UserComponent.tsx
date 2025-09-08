@@ -1,5 +1,6 @@
 import type {FC} from "react";
 import type {IUser} from "../../models/IReqResInRespons.ts";
+import './user.css'
 
 type PropsType= {
     item:IUser
