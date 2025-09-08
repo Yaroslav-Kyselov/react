@@ -5,7 +5,7 @@ import {getAllUsers} from "../../servises/api.servis.tsx";
 import {UserComponent} from "../user/UserComponent.tsx";
 
 
-export const SomeComponent = () => {
+export const UsersComponent = () => {
 
 
     const [users, setUsers] = useState<IUser[]>([]);

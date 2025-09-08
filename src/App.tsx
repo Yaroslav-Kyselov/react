@@ -1,6 +1,6 @@
 import './App.css'
 import {PaginationComponent} from "./components/pagination/PaginationComponent.tsx";
-import {SomeComponent} from "./components/some/SomeComponent.tsx";
+import {UsersComponent} from "./components/some/UsersComponent.tsx";
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
             <PaginationComponent/>
 
 
-            <SomeComponent/>
+            <UsersComponent/>
         </div>
     );
 }
