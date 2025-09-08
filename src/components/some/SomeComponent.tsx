@@ -16,8 +16,6 @@ export const SomeComponent = () => {
     }, [query]);
 
 
-
-
     return (
         <div>
             some content
