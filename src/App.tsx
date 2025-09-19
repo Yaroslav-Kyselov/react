@@ -1,12 +1,16 @@
 import './App.css'
-import type {FC} from "react";
-import FormComponent from "./components/FormComponent.tsx";
+import {type FC, useEffect} from "react";
+import {getAllUsers} from "./services/user.service.ts";
 
 const App: FC = () => {
 
+    useEffect(() => {
+        getAllUsers().then(value => console.log(value))
+    }, []);
+
     return (
         <>
-            <FormComponent/>
+
         </>
     );
 }
