@@ -1,13 +1,13 @@
 import './App.css'
-import {Outlet} from "react-router";
-import {Menu} from "./components/menu/Menu.tsx";
+import {MainLayout} from "./layouts/MainLayout.tsx";
+
 
 function App() {
 
     return (
         <>
-            <Menu/>
-            <Outlet/>
+            <MainLayout/>
+
         </>
     );
 }
