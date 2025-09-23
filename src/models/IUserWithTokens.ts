@@ -1,4 +1,6 @@
 export interface IUserWithTokens {
+    refreshToken: string;
+    accessToken: string;
   id: number;
   username: string;
   email: string;
