@@ -1,14 +1,10 @@
-import {useContext} from "react";
-import {MyContext} from "../context/MyContextProvider.tsx";
-import './AA.css'
+// import './AAA.css'
+import {AAA} from "./AAA.tsx";
 
 export const AA = () => {
 
-   const {theme} = useContext(MyContext);
 
     return (
-        <div className={theme}>
-           this is component AA, and theme is {theme}
-        </div>
+        <AAA/>
     );
 };
