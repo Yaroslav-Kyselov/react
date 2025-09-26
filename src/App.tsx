@@ -1,18 +1,29 @@
 import './App.css'
-import {Users} from "./componets/Users.tsx";
+import {A} from "./componets/A.tsx";
+import {B} from "./componets/B.tsx";
+import {MyContext} from "./context/MyContextProvider.tsx";
+import {useState} from "react";
 
 
 function App() {
 
-
+    const [themColor, setThemColor] = useState<string>("light");
 
     return (
-        <>
-            {
-               <Users/>
-            }
+        <div>
+            <MyContext.Provider value={{
+                theme: themColor,
+                changeTheme: (themeValue: string) => {
+                    setThemColor(themeValue)
+                }
+            }}>
 
-        </>
+                <A/>
+                <B/>
+
+            </MyContext.Provider>
+
+        </div>
     );
 }
 
