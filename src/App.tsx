@@ -1,12 +1,12 @@
 import './App.css'
-import {MainLayout} from "./layouts/MainLayout.tsx";
+import {UsersComponent} from "./components/UsersComponent.tsx";
 
 
 function App() {
-
+console.log('app')
     return (
         <>
-            <MainLayout/>
+            <UsersComponent/>
 
         </>
     );
