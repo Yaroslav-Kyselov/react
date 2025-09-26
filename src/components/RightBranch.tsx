@@ -3,8 +3,8 @@ import {RightBranchA} from "./RightBranchA.tsx";
 export const RightBranch = () => {
     return (
         <div>
-            RightBranch
-            <p><RightBranchA/></p>
+            <p>RightBranch</p>
+            <RightBranchA/>
         </div>
     );
 };
