@@ -1,11 +1,12 @@
-import {useAppSelector, userSliceActions} from "../main.tsx";
-import {useDispatch} from "react-redux";
+import {useAppSelector} from "../redux/hooks/useAppSelector.ts";
+import {userSliceActions} from "../redux/slices/userSlice/userSlice.ts";
 import {useEffect} from "react";
+import {useAppDispatch} from "../redux/hooks/useAppDispatch.ts";
 
 export const UsersPage = () => {
 
     const {users} = useAppSelector(({userSlice}) => userSlice);
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(value => value.json())
