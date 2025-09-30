@@ -8,11 +8,7 @@ export const UsersPage = () => {
     const {users} = useAppSelector(({userSlice}) => userSlice);
     const dispatch = useAppDispatch();
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
-            .then(value => {
-                dispatch(userSliceActions.loadUsers(value));
-            });
+        dispatch(userSliceActions.loadUsers());
     }, [])
 
     return (
