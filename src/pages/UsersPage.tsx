@@ -1,23 +1,21 @@
-import {useAppSelector} from "../redux/hooks/useAppSelector.ts";
-import {userSliceActions} from "../redux/slices/userSlice/userSlice.ts";
 import {useEffect} from "react";
-import {useAppDispatch} from "../redux/hooks/useAppDispatch.ts";
+import {useAppDispatch, useAppSelector} from "../redux/store.ts";
+import {userActions} from "../redux/slices/userSlice.ts";
+import type {IUser} from "../models/IUser.ts";
 
 export const UsersPage = () => {
 
-    const {users} = useAppSelector(({userSlice}) => userSlice);
     const dispatch = useAppDispatch();
+    const users = useAppSelector((state) => state.userStoreSlice.users);
     useEffect(() => {
-        dispatch(userSliceActions.loadUsers());
-    }, [])
+
+        dispatch(userActions.loadUsers())
+    }, [dispatch]);
+
 
     return (
         <div>
-            {
-                users.map((user) => {
-                    return <div key={user.id}>{user.name}</div>
-                })
-            }
+            {users.map((user: IUser) => (<div key={user.id}>{user.name}</div>))}
         </div>
     );
 };
