@@ -1,11 +1,10 @@
 import type {IUser} from "../models/IUser.ts";
-import type {FC} from "react";
 
-export const UserComponent:FC<{user:IUser}>= ({user: {id, name, username}}) => {
+export const UserComponent = ({user}: { user: IUser }) => {
     return (
         <div>
-            {id} {username}
-            <p>{name}</p>
+            {user.id} {user.username}
+            <p>{user.name}</p>
         </div>
     );
 }
