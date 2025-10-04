@@ -2,6 +2,7 @@ import {useEffect} from "react";
 import {useAppDispatch, useAppSelector} from "../redux/store.ts";
 import {userActions} from "../redux/slices/userSlice.ts";
 import type {IUser} from "../models/IUser.ts";
+import {UserComponent} from "../components/UserComponent.tsx";
 
 export const UsersPage = () => {
 
@@ -15,7 +16,7 @@ export const UsersPage = () => {
 
     return (
         <div>
-            {users.map((user: IUser) => (<div key={user.id}>{user.name}</div>))}
+            {users.map((user: IUser) => <UserComponent key={user.id} user={user}/>)}
         </div>
     );
 };

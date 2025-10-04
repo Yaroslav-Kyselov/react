@@ -2,6 +2,7 @@ import {useAppDispatch, useAppSelector} from "../redux/store.ts";
 import {useEffect} from "react";
 import type {IPost} from "../models/IPost.ts";
 import {postActions} from "../redux/slices/postSlice.ts";
+import {PostComponent} from "../components/PostComponent.tsx";
 
 export const PostsPage = () => {
 
@@ -14,7 +15,7 @@ export const PostsPage = () => {
 
     return (
         <div>
-            {posts.map((post: IPost) => (<div key={post.id}>{post.body}</div>))}
+            {posts.map((post: IPost) => <PostComponent key={post.id} post={post}/>)}
         </div>
     );
 };
