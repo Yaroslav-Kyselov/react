@@ -3,10 +3,6 @@ import {useEffect} from "react";
 import {userActions} from "../redux/slices/userSlice.ts";
 import {commentActions} from "../redux/slices/commentSlice.ts";
 import {postActions} from "../redux/slices/postSlice.ts";
-import {UserComponent} from "../components/UserComponent.tsx";
-import {PostComponent} from "../components/PostComponent.tsx";
-import {CommentComponent} from "../components/CommentComponent.tsx";
-import type {IUser} from "../models/IUser.ts";
 
 export const ComplexPage = () => {
 
@@ -34,12 +30,27 @@ export const ComplexPage = () => {
 
     return (
         <div>
-            {users.map((user: IUser) => <UserComponent key={user.id} user={user}/>)}
-            <hr/>
-            {posts.map(post => <PostComponent key={post.id} post={post}/>)}
-            <hr/>
-            {comments.map(comment => <CommentComponent key={comment.id} comment={comment}/>)}
-
+            {users.map(user => (
+                <div key={user.id} style={{marginBottom: 20}}>
+                    <h2> {user.name}</h2>
+                    {posts
+                        .filter(p => p.userId === user.id)
+                        .map(post => (
+                            <div key={post.id} style={{marginLeft: 20}}>
+                                <h4> {post.title}</h4>
+                                <p>{post.body}</p>
+                                <h5> Comments:</h5>
+                                <ul>
+                                    {comments
+                                        .filter(c => c.postId === post.id)
+                                        .map(c => (
+                                            <li key={c.id}>{c.body}</li>
+                                        ))}
+                                </ul>
+                            </div>
+                        ))}
+                </div>
+            ))}
         </div>
     );
 };
